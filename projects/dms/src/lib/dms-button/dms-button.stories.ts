@@ -19,5 +19,5 @@ const Template: StoryFn<DmsButtonComponent> = (args: DmsButtonComponent) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-    label: 'Click me',
+    label: 'Click me!',
 };
