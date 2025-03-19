@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
 
 import { DmsComponent } from './dms.component';
 
@@ -10,7 +13,7 @@ describe('DmsComponent', () => {
     await TestBed.configureTestingModule({
       imports: [DmsComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DmsComponent);
     component = fixture.componentInstance;
