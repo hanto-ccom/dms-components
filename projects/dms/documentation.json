@@ -37,12 +37,24 @@
                 "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryFn<DmsButtonComponent>",
-                "defaultValue": "(args: DmsButtonComponent) => ({\r\n    props: args,\r\n})"
+                "type": "StoryFn<DmsButtonComponentArgs>",
+                "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
             }
         ],
         "functions": [],
-        "typealiases": [],
+        "typealiases": [
+            {
+                "name": "DmsButtonComponentArgs",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            }
+        ],
         "enumerations": [],
         "groupedVariables": {
             "projects/dms/src/lib/dms-button/dms-button.stories.ts": [
@@ -63,8 +75,8 @@
                     "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "StoryFn<DmsButtonComponent>",
-                    "defaultValue": "(args: DmsButtonComponent) => ({\r\n    props: args,\r\n})"
+                    "type": "StoryFn<DmsButtonComponentArgs>",
+                    "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
                 }
             ],
             "projects/dms/.storybook/preview.ts": [
@@ -82,7 +94,21 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
-        "groupedTypeAliases": {}
+        "groupedTypeAliases": {
+            "projects/dms/src/lib/dms-button/dms-button.stories.ts": [
+                {
+                    "name": "DmsButtonComponentArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ]
+        }
     },
     "routes": [],
     "coverage": {
@@ -115,6 +141,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "DmsButtonComponentArgs",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
