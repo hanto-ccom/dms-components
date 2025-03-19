@@ -11,7 +11,7 @@ describe('DmsButtonComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [DmsButtonComponent]
+            imports: [DmsButtonComponent]
         })
             .compileComponents();
     });
