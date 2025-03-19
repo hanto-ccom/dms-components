@@ -5,19 +5,26 @@ import {
 
 import { DmsButtonComponent } from './dms-button.component';
 
+// Create a type for story args that redefines clickEvent as a function.
+type DmsButtonComponentArgs = Omit<DmsButtonComponent, 'clickEvent'> & {
+    clickEvent: () => void;
+};
+
 export default {
     title: 'My Library/DMS Button',
     component: DmsButtonComponent,
     argTypes: {
         label: { control: 'text' },
+        clickEvent: { action: 'clicked' },
     },
 } as Meta;
 
-const Template: StoryFn<DmsButtonComponent> = (args: DmsButtonComponent) => ({
+const Template: StoryFn<DmsButtonComponentArgs> = (args: DmsButtonComponentArgs) => ({
     props: args,
 });
 
 export const Default = Template.bind({});
 Default.args = {
     label: 'Click me!',
+    clickEvent: () => { },
 };
