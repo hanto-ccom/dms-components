@@ -14,7 +14,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -24,7 +24,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -41,6 +41,36 @@
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<DmsCardComponent>",
+                "defaultValue": "(args: DmsCardComponent) => ({\r\n    props: args,\r\n})"
+            },
+            {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -54,11 +84,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryFn<DmsCardComponent>",
-                "defaultValue": "(args: DmsCardComponent) => ({\r\n    props: args,\r\n})"
+                "type": "StoryFn<DmsDigiTestComponentArgs>",
+                "defaultValue": "(args: DmsDigiTestComponentArgs) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Tertiary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [],
@@ -73,32 +113,21 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 193
+            },
+            {
+                "name": "DmsDigiTestComponentArgs",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
             }
         ],
         "enumerations": [],
         "groupedVariables": {
-            "projects/dms/src/lib/dms-button/dms-button.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StoryFn<DmsButtonComponentArgs>",
-                    "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
-                }
-            ],
             "projects/dms/src/lib/dms-card/dms-card.stories.ts": [
                 {
                     "name": "Default",
@@ -121,6 +150,28 @@
                     "defaultValue": "(args: DmsCardComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
+            "projects/dms/src/lib/dms-button/dms-button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<DmsButtonComponentArgs>",
+                    "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
+                }
+            ],
             "projects/dms/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -131,6 +182,48 @@
                     "deprecationMessage": "",
                     "type": "Preview",
                     "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                }
+            ],
+            "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<DmsDigiTestComponentArgs>",
+                    "defaultValue": "(args: DmsDigiTestComponentArgs) => ({\r\n    props: args,\r\n})"
+                },
+                {
+                    "name": "Tertiary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ]
         },
@@ -144,6 +237,19 @@
                     "subtype": "typealias",
                     "rawtype": "",
                     "file": "projects/dms/src/lib/dms-button/dms-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ],
+            "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts": [
+                {
+                    "name": "DmsDigiTestComponentArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -213,6 +319,56 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tertiary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "DmsDigiTestComponentArgs",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
