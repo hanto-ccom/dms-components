@@ -11,6 +11,15 @@ type DmsDigiTestComponentArgs = Omit<DmsDigiTestComponent, 'clickEvent'> & {
     clickEvent: () => void;
 };
 
+
+// Define the enum options manually as strings
+const buttonVariationOptions: ButtonVariation[] = [
+    'primary',
+    'secondary',
+    'function',
+    'tertiary'
+] as ButtonVariation[];
+
 export default {
     title: 'My Library/DMS Digi Test',
     parameters: {
@@ -20,10 +29,8 @@ export default {
     argTypes: {
         clickEvent: { action: 'clicked' },
         buttonVariation: {
-            control: {
-                type: 'select',
-                options: Object.values(ButtonVariation),
-            },
+            control: { type: 'select' },
+            options: buttonVariationOptions,
         },
     },
 } as Meta;
@@ -34,18 +41,18 @@ const Template: StoryFn<DmsDigiTestComponentArgs> = (args: DmsDigiTestComponentA
 
 export const Primary = Template.bind({});
 Primary.args = {
-    buttonVariation: ButtonVariation.PRIMARY,
-    clickEvent: () => { },
+    buttonVariation: 'primary' as ButtonVariation,
+    clickEvent: () => { console.log('👋 Hallå Världen - Primary'); },
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-    buttonVariation: ButtonVariation.SECONDARY,
-    clickEvent: () => { },
+    buttonVariation: 'secondary' as ButtonVariation,
+    clickEvent: () => { console.log('👋 Hallå Världen - Secondary'); },
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-    buttonVariation: ButtonVariation.TERTIARY,
-    clickEvent: () => { },
+    buttonVariation: 'tertiary' as ButtonVariation,
+    clickEvent: () => { console.log('👋 Hallå Världen - Tertiary'); },
 };

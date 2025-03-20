@@ -1,6 +1,7 @@
 import {
     Component,
     EventEmitter,
+    Input,
     Output,
 } from '@angular/core';
 
@@ -11,16 +12,16 @@ import {
 
 @Component({
     selector: 'lib-dms-digi-test',
-    standalone: true,
     imports: [DigiArbetsformedlingenAngularModule],
     templateUrl: './dms-digi-test.component.html'
 })
 export class DmsDigiTestComponent {
+    @Input() buttonVariation: ButtonVariation = ButtonVariation.SECONDARY;
     @Output() clickEvent = new EventEmitter<void>();
 
-    buttonVariation = ButtonVariation.SECONDARY;
+
     handleClick() {
-        console.log('👋 Hallå Världen');
+
         this.clickEvent.emit();
     }
 }
