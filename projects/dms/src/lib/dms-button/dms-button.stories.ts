@@ -1,6 +1,6 @@
 import {
-  Meta,
-  StoryFn,
+    Meta,
+    StoryFn,
 } from '@storybook/angular';
 
 import { DmsButtonComponent } from './dms-button.component';
@@ -12,6 +12,9 @@ type DmsButtonComponentArgs = Omit<DmsButtonComponent, 'clickEvent'> & {
 
 export default {
     title: 'My Library/DMS Button',
+    parameters: {
+        layout: 'centered',
+    },
     component: DmsButtonComponent,
     argTypes: {
         label: { control: 'text' },
