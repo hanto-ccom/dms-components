@@ -21,6 +21,26 @@
                 "defaultValue": "[\r\n    'primary',\r\n    'secondary',\r\n    'function',\r\n    'tertiary'\r\n] as ButtonVariation[]"
             },
             {
+                "name": "Complex",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "ComplexTemplate.bind({})"
+            },
+            {
+                "name": "ComplexTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<any>",
+                "defaultValue": "(args: any) => ({\r\n    props: args,\r\n    template: `\r\n    <lib-dms-card>\r\n      <lib-dms-card-header>\r\n        <div class=\"flex items-center\">\r\n        <digi-icon-apple></digi-icon-apple>\r\n          <span class=\"font-bold text-xl text-gray-600\">{{ headerTitle }}</span>\r\n        </div>\r\n      </lib-dms-card-header>\r\n      <lib-dms-card-content>\r\n        <div class=\"p-4\">\r\n          <h3 class=\"text-lg font-semibold text-gray-600\">Advanced Section</h3>\r\n          <p class=\"text-gray-700 mt-2\">\r\n            This card demonstrates advanced header content with custom HTML and TailwindCSS styling.\r\n          </p>\r\n        </div>\r\n      </lib-dms-card-content>\r\n      <lib-dms-card-footer>{{ footerContent }}</lib-dms-card-footer>\r\n    </lib-dms-card>\r\n  `,\r\n})"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -38,7 +58,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "DefaultTemplate.bind({})"
+            },
+            {
+                "name": "DefaultTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<any>",
+                "defaultValue": "(args: any) => ({\r\n    props: args,\r\n    template: `\r\n    <lib-dms-card>\r\n      <lib-dms-card-header>{{ headerTitle }}</lib-dms-card-header>\r\n      <lib-dms-card-content>{{ cardContent }}</lib-dms-card-content>\r\n      <lib-dms-card-footer>{{ footerContent }}</lib-dms-card-footer>\r\n    </lib-dms-card>\r\n  `,\r\n})"
             },
             {
                 "name": "preview",
@@ -79,16 +109,6 @@
                 "deprecationMessage": "",
                 "type": "StoryFn<DmsButtonComponentArgs>",
                 "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "StoryFn<DmsCardComponent>",
-                "defaultValue": "(args: DmsCardComponent) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -190,6 +210,48 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
+            "projects/dms/src/lib/dms-card/dms-card.stories.ts": [
+                {
+                    "name": "Complex",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "ComplexTemplate.bind({})"
+                },
+                {
+                    "name": "ComplexTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<any>",
+                    "defaultValue": "(args: any) => ({\r\n    props: args,\r\n    template: `\r\n    <lib-dms-card>\r\n      <lib-dms-card-header>\r\n        <div class=\"flex items-center\">\r\n        <digi-icon-apple></digi-icon-apple>\r\n          <span class=\"font-bold text-xl text-gray-600\">{{ headerTitle }}</span>\r\n        </div>\r\n      </lib-dms-card-header>\r\n      <lib-dms-card-content>\r\n        <div class=\"p-4\">\r\n          <h3 class=\"text-lg font-semibold text-gray-600\">Advanced Section</h3>\r\n          <p class=\"text-gray-700 mt-2\">\r\n            This card demonstrates advanced header content with custom HTML and TailwindCSS styling.\r\n          </p>\r\n        </div>\r\n      </lib-dms-card-content>\r\n      <lib-dms-card-footer>{{ footerContent }}</lib-dms-card-footer>\r\n    </lib-dms-card>\r\n  `,\r\n})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "DefaultTemplate.bind({})"
+                },
+                {
+                    "name": "DefaultTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<any>",
+                    "defaultValue": "(args: any) => ({\r\n    props: args,\r\n    template: `\r\n    <lib-dms-card>\r\n      <lib-dms-card-header>{{ headerTitle }}</lib-dms-card-header>\r\n      <lib-dms-card-content>{{ cardContent }}</lib-dms-card-content>\r\n      <lib-dms-card-footer>{{ footerContent }}</lib-dms-card-footer>\r\n    </lib-dms-card>\r\n  `,\r\n})"
+                }
+            ],
             "projects/dms/src/lib/dms-button/dms-button.stories.ts": [
                 {
                     "name": "Default",
@@ -210,28 +272,6 @@
                     "deprecationMessage": "",
                     "type": "StoryFn<DmsButtonComponentArgs>",
                     "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
-                }
-            ],
-            "projects/dms/src/lib/dms-card/dms-card.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StoryFn<DmsCardComponent>",
-                    "defaultValue": "(args: DmsCardComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
             "projects/dms/.storybook/preview.ts": [
@@ -328,6 +368,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Complex",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ComplexTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-card/dms-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -338,7 +398,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Template",
+                "name": "DefaultTemplate",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
