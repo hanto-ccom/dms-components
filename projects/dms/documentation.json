@@ -61,6 +61,16 @@
                 "defaultValue": "DefaultTemplate.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "DefaultTemplate",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -119,6 +129,16 @@
                 "deprecationMessage": "",
                 "type": "StoryFn<DmsDigiTestComponentArgs>",
                 "defaultValue": "(args: DmsDigiTestComponentArgs) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<DmsSearchComponent>",
+                "defaultValue": "(args: DmsSearchComponent) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Tertiary",
@@ -272,6 +292,28 @@
                     "deprecationMessage": "",
                     "type": "StoryFn<DmsButtonComponentArgs>",
                     "defaultValue": "(args: DmsButtonComponentArgs) => ({\r\n    props: args,\r\n})"
+                }
+            ],
+            "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<DmsSearchComponent>",
+                    "defaultValue": "(args: DmsSearchComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
             "projects/dms/.storybook/preview.ts": [
@@ -459,6 +501,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "DmsDigiTestComponentArgs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

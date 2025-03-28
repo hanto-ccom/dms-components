@@ -1,3 +1,5 @@
+import { join } from 'path';
+
 import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
@@ -17,6 +19,7 @@ const config: StorybookConfig = {
           // Replaces existing CSS rules to support PostCSS
           {
             test: /\.css$/,
+            include: [join(__dirname, '../src/styles')],
             use: [
               'style-loader',
               {
@@ -34,6 +37,18 @@ const config: StorybookConfig = {
       }
     }
   ],
+
+  webpackFinal: async (config) => {
+    // Add a rule to process Angular component CSS files using raw-loader,
+    // which will provide the CSS as a string for ShadowCSS to process.
+    config!.module!.rules!.push({
+      test: /\.css$/,
+      // Exclude global styles directory so they’re handled by your PostCSS rule
+      exclude: [join(__dirname, '../src/styles')],
+      type: 'asset/source'
+    });
+    return config;
+  },
   "framework": {
     "name": "@storybook/angular",
     "options": {}

@@ -1,3 +1,12 @@
 @import "tailwindcss";
-@import '@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/digi-arbetsformedlingen.css';
-@import '@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/fonts.css';
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+}
+
+[data-theme="test"] {
+  --dms-background-color--primary: var(--color-mint-500);
+}
+
+@import "@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/digi-arbetsformedlingen.css";
+@import "@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/fonts.css";

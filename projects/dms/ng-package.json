@@ -4,5 +4,5 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "assets": ["dist/tailwind.css"]
+  "assets": ["dist/tailwind.css", "dist/global.css"]
 }
