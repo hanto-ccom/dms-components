@@ -35,7 +35,8 @@ const config: StorybookConfig = {
           }
         ]
       }
-    }
+    },
+    '@storybook/addon-themes',
   ],
 
   webpackFinal: async (config) => {

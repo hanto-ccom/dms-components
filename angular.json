@@ -38,6 +38,7 @@
             "browserTarget": "dms:build",
             "styles": [
               "projects/dms/src/styles/tailwind.css",
+              "projects/dms/src/styles/vendor.css",
               "projects/dms/src/styles/global.css"
             ],
             "compodoc": true,

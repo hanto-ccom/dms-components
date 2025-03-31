@@ -1,5 +1,7 @@
 :root {
 
+   /* styling nested digi components */
+
     /*dms primary button color*/
     --dms-button-color-primary--default: var(--digi--leaf-600);
     --dms-button-color-primary--hover: var(--digi--leaf-400);
