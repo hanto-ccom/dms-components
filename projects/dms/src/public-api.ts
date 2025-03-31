@@ -12,3 +12,6 @@ export * from './lib/dms-card/dms-card.component';
 export * from './lib/dms-card/dms-card-header.component';
 export * from './lib/dms-card/dms-card-content.component';
 export * from './lib/dms-card/dms-card-footer.component';
+
+//DMS SEARCH CASE
+export * from './lib/dms-search-case/dms-search-case.component'
