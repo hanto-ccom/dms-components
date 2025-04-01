@@ -8,6 +8,7 @@ import {
 @Component({
   selector: 'lib-dms-button',
   templateUrl: './dms-button.component.html',
+  standalone: true
 })
 export class DmsButtonComponent {
   @Input() label: string = 'Click me';

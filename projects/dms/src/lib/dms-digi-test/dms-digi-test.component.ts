@@ -6,14 +6,13 @@ import {
 } from '@angular/core';
 
 import { ButtonVariation } from '@digi/arbetsformedlingen';
-import {
-    DigiArbetsformedlingenAngularModule,
-} from '@digi/arbetsformedlingen-angular';
+import { DigiArbetsformedlingenAngularModule } from '@digi/arbetsformedlingen-angular';
 
 @Component({
     selector: 'lib-dms-digi-test',
     imports: [DigiArbetsformedlingenAngularModule],
-    templateUrl: './dms-digi-test.component.html'
+    templateUrl: './dms-digi-test.component.html',
+    standalone: true
 })
 export class DmsDigiTestComponent {
     @Input() buttonVariation: ButtonVariation = ButtonVariation.SECONDARY;

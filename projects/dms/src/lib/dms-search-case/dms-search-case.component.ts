@@ -10,7 +10,8 @@ import { DigiArbetsformedlingenAngularModule } from '@digi/arbetsformedlingen-an
     selector: 'lib-dms-search',
     imports: [DigiArbetsformedlingenAngularModule],
     templateUrl: './dms-search-case.component.html',
-    styleUrls: ['./dms-search-case.component.css']
+    styleUrls: ['./dms-search-case.component.css'],
+    standalone: true
 })
 export class DmsSearchComponent {
 
