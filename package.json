@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:all": "npm run build:tailwind && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:tailwind": "npx tailwindcss -i ./projects/dms/src/styles/tailwind.css -o ./dist/tailwind.css",
