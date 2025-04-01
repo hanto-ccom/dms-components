@@ -2,13 +2,13 @@
   "name": "dms-workspace",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:all": "npm run build:tailwind && ng build",
+    "create:bundle-entry": "echo @import \"./tailwind.generated.css\"; > projects/dms/src/styles/bundle.css && echo @import \"./vendor.css\"; >> projects/dms/src/styles/bundle.css && echo @import \"./global.css\"; >> projects/dms/src/styles/bundle.css",
+    "build:tailwind": "npx tailwindcss -i ./projects/dms/src/styles/tailwind.css -o ./projects/dms/src/styles/tailwind.generated.css",
+    "build:bundle": "postcss ./projects/dms/src/styles/bundle.css -o ./projects/dms/bundle.css",
+    "build:all": "npm run build:tailwind && npm run create:bundle-entry && npm run build:bundle && ng build dms && npm run cleanup:css",
+    "cleanup:css": "npx rimraf \"./projects/dms/src/styles/tailwind.generated.css\" && npx rimraf \"./projects/dms/src/styles/bundle.css\" && npx rimraf \"./projects/dms/bundle.css\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:tailwind": "npx tailwindcss -i ./projects/dms/src/styles/tailwind.css -o ./dist/tailwind.css",
     "storybook": "ng run dms:storybook",
     "build-storybook": "ng run dms:build-storybook"
   },
@@ -46,6 +46,7 @@
     "@storybook/blocks": "^8.6.7",
     "@storybook/test": "^8.6.7",
     "@types/jasmine": "~5.1.0",
+    "autoprefixer": "^10.4.21",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -54,9 +55,11 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^19.2.0",
     "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "rimraf": "^6.0.1",
     "storybook": "^8.6.7",
     "typescript": "~5.7.2"
   }
