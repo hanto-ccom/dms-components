@@ -6,55 +6,27 @@
   }
 
   .sc-digi-button-h {
-    --digi--button--color--background--primary--default: var(
-      --dms-button-color-primary--default
-    );
-    --digi--button--color--background--primary--hover: var(
-      --dms-button-color-primary--hover
-    );
-    --digi--button--color--background--primary--focus: var(
-      --dms-button-color-primary--focus
-    );
-    --digi--button--color--background--primary--active: var(
-      --dms-button-color-primary--active
-    );
+    --digi--button--color--background--primary--default: var(--dms-button-color-primary--default);
+    --digi--button--color--background--primary--hover: var(--dms-button-color-primary--hover);
+    --digi--button--color--background--primary--focus: var(--dms-button-color-primary--focus);
+    --digi--button--color--background--primary--active: var(--dms-button-color-primary--active);
 
-    --digi--button--color--text--primary--default: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--text--primary--hover: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--text--primary--focus: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--text--primary--active: var(
-      --digi--color--text--inverted
-    );
+    --digi--button--color--text--primary--default: var(--digi--color--text--inverted);
+    --digi--button--color--text--primary--hover: var(--digi--color--text--inverted);
+    --digi--button--color--text--primary--focus: var(--digi--color--text--inverted);
+    --digi--button--color--text--primary--active: var(--digi--color--text--inverted);
 
     --digi--button--color--border--primary--default: var(--digi--leaf-600);
     --digi--button--color--border--primary--hover: var(--digi--leaf-400);
     --digi--button--color--border--primary--focus: var(--digi--leaf-400);
     --digi--button--color--border--primary--active: var(--digi--leaf-400);
 
-    --digi--button--color--icon--primary--default: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--icon--primary--hover: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--icon--primary--focus: var(
-      --digi--color--text--inverted
-    );
-    --digi--button--color--icon--primary--active: var(
-      --digi--color--text--inverted
-    );
+    --digi--button--color--icon--primary--default: var(--digi--color--text--inverted);
+    --digi--button--color--icon--primary--hover: var(--digi--color--text--inverted);
+    --digi--button--color--icon--primary--focus: var(--digi--color--text--inverted);
+    --digi--button--color--icon--primary--active: var(--digi--color--text--inverted);
 
-    --digi--button--border-width--primary--default: var(
-      --digi--border-width--primary
-    );
-    --digi--button--border-width--primary--hover: var(
-      --digi--border-width--primary
-    );
+    --digi--button--border-width--primary--default: var(--digi--border-width--primary);
+    --digi--button--border-width--primary--hover: var(--digi--border-width--primary);
   }
 }

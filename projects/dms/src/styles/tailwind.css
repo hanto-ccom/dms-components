@@ -1,22 +1,20 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant ehndl (&:where([data-theme=ehndl], [data-theme=ehndl] *));
 @custom-variant arbf (&:where([data-theme=arbf], [data-theme=arbf] *));
 
 @theme {
   --color-mint-500: oklch(0.72 0.11 178); /*a new color to be used */
-  --color-dms-primary: var(
-    --color-blue-400
-  ); /* a new variable to be used i.e bg-dms-primary */
+  --color-dms-primary: var(--color-blue-400); /* a new variable to be used i.e bg-dms-primary */
 }
 
 /*themes setting new dms variable depending on theme*/
 @layer base {
-  [data-theme="ehndl"] {
+  [data-theme='ehndl'] {
     --color-dms-primary: var(--color-mint-500);
   }
 
-  [data-theme="arbf"] {
+  [data-theme='arbf'] {
     --color-dms-primary: var(--color-red-200);
   }
 }

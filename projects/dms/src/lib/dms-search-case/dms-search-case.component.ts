@@ -4,9 +4,7 @@ import {
 } from '@angular/core';
 
 import { FormInputButtonVariation } from '@digi/arbetsformedlingen';
-import {
-    DigiArbetsformedlingenAngularModule,
-} from '@digi/arbetsformedlingen-angular';
+import { DigiArbetsformedlingenAngularModule } from '@digi/arbetsformedlingen-angular';
 
 @Component({
     selector: 'lib-dms-search',

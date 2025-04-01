@@ -1,18 +1,16 @@
 :root {
+  /* styling nested digi components */
 
-   /* styling nested digi components */
-
-    /*dms primary button color*/
-    --dms-button-color-primary--default: var(--digi--leaf-600);
-    --dms-button-color-primary--hover: var(--digi--leaf-400);
-    --dms-button-color-primary--focus: var(--digi--leaf-400);
-    --dms-button-color-primary--active:var(--digi--leaf-400);
-
+  /*dms primary button color*/
+  --dms-button-color-primary--default: var(--digi--leaf-600);
+  --dms-button-color-primary--hover: var(--digi--leaf-400);
+  --dms-button-color-primary--focus: var(--digi--leaf-400);
+  --dms-button-color-primary--active: var(--digi--leaf-400);
 }
 
 /*override tailwind to match digi's to prevent components from breaking look-n-feel */
 button {
-    font: initial;
-    font-family: var(--digi--button--font-family);
-    font-weight: var(--digi--button--font-weight--default);
+  font: initial;
+  font-family: var(--digi--button--font-family);
+  font-weight: var(--digi--button--font-weight--default);
 }

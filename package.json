@@ -54,6 +54,8 @@
     "ng-packagr": "^19.2.0",
     "postcss": "^8.5.3",
     "postcss-loader": "^8.1.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "storybook": "^8.6.7",
     "typescript": "~5.7.2"
   }
