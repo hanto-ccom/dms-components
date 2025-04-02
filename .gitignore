@@ -6,6 +6,11 @@
 /out-tsc
 /bazel-out
 
+/projects/dms/vendor/
+
+# Auto-generated vendor styles and assets
+projects/dms/src/styles/vendor/
+
 # Node
 /node_modules
 npm-debug.log
