@@ -124,21 +124,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "StoryFn<DmsDigiTestComponentArgs>",
-                "defaultValue": "(args: DmsDigiTestComponentArgs) => ({\r\n    props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryFn<DmsSearchComponent>",
                 "defaultValue": "(args: DmsSearchComponent) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-digi-test/dms-digi-test.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<DmsDigiTestComponentArgs>",
+                "defaultValue": "(args: DmsDigiTestComponentArgs) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Tertiary",

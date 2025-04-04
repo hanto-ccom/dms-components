@@ -2,7 +2,7 @@
   "name": "dms-workspace",
   "version": "0.0.0",
   "scripts": {
-    "create:bundle-entry": "echo @import \"./vendor-digi.css\"; > projects/dms/src/styles/vendor/vendor.css && echo @import \"./vendor-fonts.css\"; >> projects/dms/src/styles/vendor/vendor.css && echo @import \"./tailwind.generated.css\"; > projects/dms/src/styles/bundle.css && echo @import \"./vendor/vendor.css\"; >> projects/dms/src/styles/bundle.css && echo @import \"./global.css\"; >> projects/dms/src/styles/bundle.css",
+    "create:bundle-entry": "echo @import \"./vendor-digi.css\"; > projects/dms/src/styles/vendor/vendor.css && echo @import \"./vendor-fonts.css\"; >> projects/dms/src/styles/vendor/vendor.css && echo @import \"./tailwind.generated.css\"; > projects/dms/src/styles/bundle.css && echo @import \"./vendor/vendor.css\"; >> projects/dms/src/styles/bundle.css && echo @import \"./global.css\"; >> projects/dms/src/styles/bundle.css && echo @import \"./digi-overrides/digi-overrides.css\"; >> projects/dms/src/styles/bundle.css",
     "copy:vendor": "node scripts/copy-vendor-css.js",
     "build:tailwind": "npx tailwindcss -i ./projects/dms/src/styles/tailwind.css -o ./projects/dms/src/styles/tailwind.generated.css",
     "build:bundle": "postcss ./projects/dms/src/styles/bundle.css -o ./projects/dms/bundle.css",

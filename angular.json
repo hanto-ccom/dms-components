@@ -39,7 +39,8 @@
             "styles": [
               "projects/dms/src/styles/tailwind.css",
               "projects/dms/src/styles/vendor/vendor.css",
-              "projects/dms/src/styles/global.css"
+              "projects/dms/src/styles/global.css",
+              "projects/dms/src/styles/digi-overrides/digi-overrides.css"
             ],
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "projects/dms"],
