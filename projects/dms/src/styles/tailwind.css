@@ -5,7 +5,42 @@
 
 @theme {
   --color-mint-500: oklch(0.72 0.11 178); /*a new color to be used */
+  /*Semantic names */
   --color-dms-primary: var(--color-blue-400); /* a new variable to be used i.e bg-dms-primary */
+
+  /* TODO: MAP COLOR PALETTE */
+  /*
+--color-dms-primary-hover
+--color-dms-primary-focus
+--color-dms-primary-active
+--color-dms-on-primary
+
+--color-dms-secondary
+--color-dms-secondary-hover
+--color-dms-secondary-focus
+--color-dms-secondary-active
+--color-dms-on-secondary
+
+--color-dms-background
+--color-dms-surface   
+--color-dms-on-surface
+--color-dms-surface-variant   
+
+--color-dms-success
+--color-dms-warning
+--color-dms-error
+--color-dms-info
+
+--color-dms-on-success
+--color-dms-on-warning
+--color-dms-on-error
+--color-dms-on-info
+
+--color-dms-border
+--color-dms-divider
+--color-dms-focus-ring
+--color-dms-outline 
+*/
 }
 
 /*themes setting new dms variable depending on theme*/
