@@ -23,8 +23,8 @@ const preview: Preview = {
     withThemeByDataAttribute<Renderer>({
       themes: {
         default: 'default',
-        arbetsformedling: 'arbetsformedling',
-        ehandel: 'ehandel'
+        arbetsformedling: 'arbf',
+        ehandel: 'ehndl'
       },
       defaultTheme: 'default',
       attributeName: 'data-theme',
