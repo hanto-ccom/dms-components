@@ -13,7 +13,8 @@
     "test": "ng test",
     "storybook": "npm run prepare:dev && ng run dms:storybook",
     "build-storybook": "ng run dms:build-storybook",
-    "build:demo": "ng build demo"
+    "build:demo": "ng build demo",
+    "publish:npm": "node scripts/publish.mjs"
   },
   "private": true,
   "dependencies": {

@@ -16,6 +16,9 @@ projects/dms/src/styles/vendor/
 npm-debug.log
 yarn-error.log
 
+projects/demo/node_modules/
+projects/demo/dist/
+
 # IDEs and editors
 .idea/
 .project
