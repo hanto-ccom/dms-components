@@ -1,6 +1,15 @@
 {
   "name": "dms",
   "version": "0.0.1",
+  "description": "DMS design system component library for Angular",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "component-library",
+    "design-system",
+    "ui-components",
+    "dms"
+  ],
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"

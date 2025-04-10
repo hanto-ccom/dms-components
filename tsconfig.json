@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    /* import {x} from 'dms' <--- look in ./dist/dms */ 
     "paths": {
       "dms": [
         "./dist/dms"
