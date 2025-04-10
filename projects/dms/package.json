@@ -11,11 +11,20 @@
     "dms"
   ],
   "peerDependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.0"
+    "@angular/common": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/dms.mjs"
+    }
+  },
+  "main": "./bundles/dms.umd.js",
+  "module": "./fesm2022/dms.mjs",
+  "typings": "./index.d.ts",
   "sideEffects": false
 }
