@@ -24,6 +24,8 @@ This project is an Angular workspace that includes the `dms` library—a design 
     - [build-storybook](#build-storybook)
     - [build:demo](#builddemo)
     - [publish:npm (todo)](#publishnpm-todo)
+  - [Publishing](#publishing)
+  - [License](#license)
 
 ## Pre-requisites
 * Nodejs >= 22.13.0
@@ -152,3 +154,12 @@ this creates a dist for dms in /dist
 
 
 
+## Publishing
+To publish the dms library to the npm registry:
+1. Build the Library: Ensure the library is built and ready for publishing.
+2. Publish to npm: Run the publish script.
+   
+This will handle the packaging and publishing process, making your library available on npm.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
