@@ -12,7 +12,7 @@ const pkgPath = path.resolve('projects/dms/package.json');
 const distPath = path.resolve('dist/dms');
 
 try {
-  // Step 1: Bump version (optional, manual or automated outside this script)
+  // Step 1: Build
   console.log('\n📦 Building library...');
   run('node scripts/build-all.mjs');
 
