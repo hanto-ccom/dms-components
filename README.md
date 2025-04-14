@@ -30,6 +30,7 @@ This project is an Angular workspace that includes the `dms` library—a design 
 ## Pre-requisites
 * Nodejs >= 22.13.0
 * Npm >= 10.9.2
+* Angular ^19.2.3
 
 ## Installation
 
