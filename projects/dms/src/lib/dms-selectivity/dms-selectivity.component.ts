@@ -8,6 +8,7 @@ import {
     Output,
 } from '@angular/core';
 import {
+    FormControl,
     FormsModule,
     ReactiveFormsModule,
 } from '@angular/forms';
@@ -73,6 +74,8 @@ export class DmsSelectivityComponent implements OnInit {
     items: any[] = [];
     loading = false;
     search$ = new Subject<string>();
+
+    selectControl = new FormControl();
 
     ngOnInit() {
         if (!this.searchFn) {

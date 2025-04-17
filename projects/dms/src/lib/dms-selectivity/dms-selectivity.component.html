@@ -1,6 +1,8 @@
-<ng-select [items]="items" bindLabel="displayLabel" bindValue="id" [id]="inputId" [multiple]="multiple" [placeholder]="placeholder" [readonly]="disabled"
-    [clearable]="clearable" [loading]="loading" [typeahead]="search$" [addTag]="tagging ? createTag : false"
-    [attr.aria-label]="ariaLabel" [attr.aria-describedby]="ariaDescribedBy" [attr.aria-invalid]="error ? true : null"
-    (change)="change.emit($event)" (open)="open.emit()" (close)="close.emit()"
-     class="w-full focus:ring-2 focus:ring-primary focus:ring-offset-1"
-    ></ng-select>
+<ng-select [ngClass]="{
+    'border-red-600 ring ring-red-200': selectControl.invalid && selectControl.touched
+  }" [formControl]="selectControl" [items]="items" bindLabel="displayLabel" bindValue="id" [id]="inputId"
+    [multiple]="multiple" [placeholder]="placeholder" [readonly]="disabled" [clearable]="clearable" [loading]="loading"
+    [typeahead]="search$" [addTag]="tagging ? createTag : false" [attr.aria-label]="ariaLabel"
+    [attr.aria-describedby]="ariaDescribedBy" [attr.aria-invalid]="error ? true : null" (change)="change.emit($event)"
+    (open)="open.emit()" (close)="close.emit()"
+    class="w-full focus:ring-2 focus:ring-primary focus:ring-offset-1"></ng-select>
