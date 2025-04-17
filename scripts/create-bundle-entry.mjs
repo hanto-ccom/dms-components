@@ -13,6 +13,7 @@ const bundleContent = `@import "./tailwind.generated.css";
 
 const vendorContent = `@import "./vendor-digi.css";
 @import "./vendor-fonts.css";
+@import "./vendor-ng-select.css";
 `;
 
 fs.writeFileSync(vendorPath, vendorContent);

@@ -71,6 +71,18 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            searchFn: (term: string) =>\r\n                of(mockItems.filter((i) =>\r\n                    i.displayLabel.toLowerCase().includes(term.toLowerCase())\r\n                )),\r\n        },\r\n    }),\r\n    args: {\r\n        multiple: false,\r\n        placeholder: 'Search fruit…',\r\n        disabled: false,\r\n        clearable: true,\r\n        tagging: false,\r\n        debounceTime: 300,\r\n        minimumInputLength: 1,\r\n    },\r\n}",
+                "rawdescription": "Default (single-select) with mocked searchFn.",
+                "description": "<p>Default (single-select) with mocked searchFn.</p>\n"
+            },
+            {
                 "name": "DefaultTemplate",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -79,6 +91,80 @@
                 "deprecationMessage": "",
                 "type": "StoryFn<any>",
                 "defaultValue": "(args: any) => ({\r\n    props: args,\r\n    template: `\r\n    <lib-dms-card>\r\n      <lib-dms-card-header>{{ headerTitle }}</lib-dms-card-header>\r\n      <lib-dms-card-content>{{ cardContent }}</lib-dms-card-content>\r\n      <lib-dms-card-footer>{{ footerContent }}</lib-dms-card-footer>\r\n    </lib-dms-card>\r\n  `,\r\n})"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DmsDirectorySuggestionComponent>",
+                "defaultValue": "{\r\n    title: 'Components/DmsDirectorySuggestion',\r\n    component: DmsDirectorySuggestionComponent,\r\n    tags: ['autodocs'],\r\n    decorators: [\r\n        moduleMetadata({\r\n            // import your standalone component directly\r\n            imports: [DmsDirectorySuggestionComponent],\r\n            providers: [\r\n                { provide: DirectoryService, useValue: mockDirectoryService },\r\n            ],\r\n        }),\r\n    ],\r\n    argTypes: {\r\n        valueChange: { action: 'valueChanged' },\r\n        errorMessage: { control: 'text' },\r\n    },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DmsSelectivityComponent>",
+                "defaultValue": "{\r\n    title: 'Components/DmsSelectivity',\r\n    component: DmsSelectivityComponent,\r\n    tags: ['autodocs'],\r\n    decorators: [\r\n        // no moduleMetadata needed since it's standalone\r\n    ],\r\n    argTypes: {\r\n        searchFn: { table: { disable: true } },\r\n        inputId: { table: { disable: true } },\r\n        change: { action: 'changed' },\r\n        open: { action: 'opened' },\r\n        close: { action: 'closed' },\r\n        error: { table: { disable: true } },\r\n    },\r\n}"
+            },
+            {
+                "name": "mockDirectoryService",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n    suggestEntries: (_params: any) => of(mockEntries),\r\n}"
+            },
+            {
+                "name": "mockEntries",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "DirectoryEntry[]",
+                "defaultValue": "[\r\n    { id: 'eng', displayLabel: 'Engineering' },\r\n    { id: 'hr', displayLabel: 'Human Resources' },\r\n    { id: 'sales', displayLabel: 'Sales' },\r\n]"
+            },
+            {
+                "name": "mockItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "DirectoryEntry[]",
+                "defaultValue": "[\r\n    { id: 'apple', displayLabel: 'Apple' },\r\n    { id: 'banana', displayLabel: 'Banana' },\r\n    { id: 'cherry', displayLabel: 'Cherry' },\r\n]"
+            },
+            {
+                "name": "MultipleRequiredWithError",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        ...SingleSelect.args!,\r\n        id: 'dept-suggest-2',\r\n        label: 'Departments (required)',\r\n        multiple: true,\r\n        required: true,\r\n        errorMessage: 'At least one department must be selected.',\r\n    },\r\n}",
+                "rawdescription": "Multiple‐select version with required validation error shown.",
+                "description": "<p>Multiple‐select version with required validation error shown.</p>\n"
+            },
+            {
+                "name": "MultipleWithTagging",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            searchFn: (term: string) =>\r\n                of(mockItems.filter((i) =>\r\n                    i.displayLabel.toLowerCase().includes(term.toLowerCase())\r\n                )),\r\n        },\r\n    }),\r\n    args: {\r\n        ...Default.args,\r\n        multiple: true,\r\n        tagging: true,\r\n        placeholder: 'Pick or add tags…',\r\n    },\r\n}",
+                "rawdescription": "Multiple + tagging enabled.",
+                "description": "<p>Multiple + tagging enabled.</p>\n"
             },
             {
                 "name": "preview",
@@ -109,6 +195,18 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "SingleSelect",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'dept-suggest-1',\r\n        label: 'Department',\r\n        directoryName: 'departments',\r\n        placeholder: 'Type to search departments…',\r\n        multiple: false,\r\n        readonly: false,\r\n        required: false,\r\n        minChars: 1,\r\n        frequency: 300,\r\n        errorMessage: '',\r\n    },\r\n}",
+                "rawdescription": "Default single‐select version.",
+                "description": "<p>Default single‐select version.</p>\n"
             },
             {
                 "name": "Template",
@@ -174,6 +272,28 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 193
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DmsDirectorySuggestionComponent>",
+                "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DmsSelectivityComponent>",
+                "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
@@ -316,6 +436,108 @@
                     "defaultValue": "(args: DmsSearchComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
+            "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            searchFn: (term: string) =>\r\n                of(mockItems.filter((i) =>\r\n                    i.displayLabel.toLowerCase().includes(term.toLowerCase())\r\n                )),\r\n        },\r\n    }),\r\n    args: {\r\n        multiple: false,\r\n        placeholder: 'Search fruit…',\r\n        disabled: false,\r\n        clearable: true,\r\n        tagging: false,\r\n        debounceTime: 300,\r\n        minimumInputLength: 1,\r\n    },\r\n}",
+                    "rawdescription": "Default (single-select) with mocked searchFn.",
+                    "description": "<p>Default (single-select) with mocked searchFn.</p>\n"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DmsSelectivityComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/DmsSelectivity',\r\n    component: DmsSelectivityComponent,\r\n    tags: ['autodocs'],\r\n    decorators: [\r\n        // no moduleMetadata needed since it's standalone\r\n    ],\r\n    argTypes: {\r\n        searchFn: { table: { disable: true } },\r\n        inputId: { table: { disable: true } },\r\n        change: { action: 'changed' },\r\n        open: { action: 'opened' },\r\n        close: { action: 'closed' },\r\n        error: { table: { disable: true } },\r\n    },\r\n}"
+                },
+                {
+                    "name": "mockItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "DirectoryEntry[]",
+                    "defaultValue": "[\r\n    { id: 'apple', displayLabel: 'Apple' },\r\n    { id: 'banana', displayLabel: 'Banana' },\r\n    { id: 'cherry', displayLabel: 'Cherry' },\r\n]"
+                },
+                {
+                    "name": "MultipleWithTagging",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            searchFn: (term: string) =>\r\n                of(mockItems.filter((i) =>\r\n                    i.displayLabel.toLowerCase().includes(term.toLowerCase())\r\n                )),\r\n        },\r\n    }),\r\n    args: {\r\n        ...Default.args,\r\n        multiple: true,\r\n        tagging: true,\r\n        placeholder: 'Pick or add tags…',\r\n    },\r\n}",
+                    "rawdescription": "Multiple + tagging enabled.",
+                    "description": "<p>Multiple + tagging enabled.</p>\n"
+                }
+            ],
+            "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DmsDirectorySuggestionComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/DmsDirectorySuggestion',\r\n    component: DmsDirectorySuggestionComponent,\r\n    tags: ['autodocs'],\r\n    decorators: [\r\n        moduleMetadata({\r\n            // import your standalone component directly\r\n            imports: [DmsDirectorySuggestionComponent],\r\n            providers: [\r\n                { provide: DirectoryService, useValue: mockDirectoryService },\r\n            ],\r\n        }),\r\n    ],\r\n    argTypes: {\r\n        valueChange: { action: 'valueChanged' },\r\n        errorMessage: { control: 'text' },\r\n    },\r\n}"
+                },
+                {
+                    "name": "mockDirectoryService",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n    suggestEntries: (_params: any) => of(mockEntries),\r\n}"
+                },
+                {
+                    "name": "mockEntries",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "DirectoryEntry[]",
+                    "defaultValue": "[\r\n    { id: 'eng', displayLabel: 'Engineering' },\r\n    { id: 'hr', displayLabel: 'Human Resources' },\r\n    { id: 'sales', displayLabel: 'Sales' },\r\n]"
+                },
+                {
+                    "name": "MultipleRequiredWithError",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        ...SingleSelect.args!,\r\n        id: 'dept-suggest-2',\r\n        label: 'Departments (required)',\r\n        multiple: true,\r\n        required: true,\r\n        errorMessage: 'At least one department must be selected.',\r\n    },\r\n}",
+                    "rawdescription": "Multiple‐select version with required validation error shown.",
+                    "description": "<p>Multiple‐select version with required validation error shown.</p>\n"
+                },
+                {
+                    "name": "SingleSelect",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'dept-suggest-1',\r\n        label: 'Department',\r\n        directoryName: 'departments',\r\n        placeholder: 'Type to search departments…',\r\n        multiple: false,\r\n        readonly: false,\r\n        required: false,\r\n        minChars: 1,\r\n        frequency: 300,\r\n        errorMessage: '',\r\n    },\r\n}",
+                    "rawdescription": "Default single‐select version.",
+                    "description": "<p>Default single‐select version.</p>\n"
+                }
+            ],
             "projects/dms/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -357,12 +579,38 @@
                     "description": "",
                     "kind": 193
                 }
+            ],
+            "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DmsDirectorySuggestionComponent>",
+                    "file": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DmsSelectivityComponent>",
+                    "file": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
     "routes": [],
     "coverage": {
-        "count": 0,
+        "count": 14,
         "status": "low",
         "files": [
             {
@@ -506,6 +754,66 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mockDirectoryService",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mockEntries",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MultipleRequiredWithError",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SingleSelect",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-directory-suggestion/dms-directory-suggestion.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/dms/src/lib/dms-search-case/dms-search-case.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -521,6 +829,56 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mockItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MultipleWithTagging",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/dms/src/lib/dms-selectivity/dms-selectivity.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

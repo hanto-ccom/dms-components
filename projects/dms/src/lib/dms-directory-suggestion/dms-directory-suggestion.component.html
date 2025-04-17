@@ -1,0 +1,16 @@
+<!-- 1. Visible label -->
+<label *ngIf="label" [for]="id + '-input'" class="block text-sm font-medium text-gray-700">
+    {{ label }} <span *ngIf="required" aria-hidden="true" class="text-red-600">*</span>
+</label>
+
+<!-- 2. The actual selectivity -->
+<dms-selectivity [inputId]="id + '-input'" [ariaLabel]="ariaLabel || label"
+    [ariaDescribedBy]="errorMessage ? (id + '-error') : null" [error]="errorMessage" [multiple]="multiple"
+    [placeholder]="placeholder" [debounceTime]="frequency" [minimumInputLength]="minChars" [disabled]="readonly"
+    [clearable]="!required" [searchFn]="searchEntries.bind(this)" (change)="onChange($event)" class="mt-1">
+</dms-selectivity>
+
+<!-- 3. Error output -->
+<p *ngIf="errorMessage" [id]="id + '-error'" class="mt-1 text-sm text-red-600" role="alert">
+    {{ errorMessage }}
+</p>

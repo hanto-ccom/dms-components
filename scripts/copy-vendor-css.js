@@ -27,6 +27,14 @@ const fontsSourceDir = path.join(
   'node_modules/@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/assets/fonts'
 );
 
+// ng-select paths
+const ngSelectCssPath = path.join(
+  root,
+  'node_modules/@ng-select/ng-select/themes/default.theme.css'
+);
+// target for ng-select CSS in your dev vendor folder
+const vendorNgSelectCss = path.join(vendorDir, 'vendor-ng-select.css');
+
 // Ensure target directories exist
 fs.mkdirSync(vendorAssetsDir, { recursive: true });
 fs.mkdirSync(packagingFontsDir, { recursive: true });
@@ -37,6 +45,10 @@ console.log('✅ Copied vendor-digi.css');
 
 fs.copyFileSync(fontsCssPath, vendorFontsCss);
 console.log('✅ Copied vendor-fonts.css');
+
+// Copy ng-select theme CSS
+fs.copyFileSync(ngSelectCssPath, vendorNgSelectCss);
+console.log('✅ Copied vendor-ng-select.css');
 
 // Copy fonts (for dev and packaging)
 const fontFiles = fs.readdirSync(fontsSourceDir);
@@ -53,6 +65,7 @@ for (const file of fontFiles) {
 // ✅ Create vendor.css that @imports the others
 const vendorCssContent = `@import './vendor-digi.css';
 @import './vendor-fonts.css';
+@import './vendor-ng-select.css';
 `;
 fs.writeFileSync(vendorBundleCss, vendorCssContent);
 console.log('✅ Generated vendor.css');
