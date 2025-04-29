@@ -52,9 +52,9 @@ export class DmsSelectivityComponent implements OnInit {
     /** if you don’t have a visible `<label>`, you can set this */
     @Input() ariaLabel?: string;
     /** hook up to an error message `<span id="…">` */
-    @Input() ariaDescribedBy?: string;
+    @Input() ariaDescribedBy?: string | null;
     /** highlight invalid state */
-    @Input() error?: string;
+    @Input() error?: string | null;
 
     @Input() multiple = false;
     @Input() placeholder = '';

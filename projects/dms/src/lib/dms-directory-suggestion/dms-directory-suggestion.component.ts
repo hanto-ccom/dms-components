@@ -40,7 +40,7 @@ export class DmsDirectorySuggestionComponent implements OnInit {
     @Input() params: Record<string, any> = {};
 
     /** validation / server error message */
-    @Input() errorMessage?: string;
+    @Input() errorMessage?: string | null;
 
     @Output() valueChange = new EventEmitter<string | string[]>();
 
